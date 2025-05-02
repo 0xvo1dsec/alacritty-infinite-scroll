@@ -1,3 +1,29 @@
+## ALACRITTY INFINITE SCROLLBACK
+
+clone this and compile:
+```bash
+git clone https://github.com/0xvo1dsec/alacritty-infinite-scroll.git
+cd alacritty-infinite-scroll
+cargo build --release
+```
+
+it'll compile into `./target`, run this command to overwrite the current alacritty installation with the infinite scrollback one:
+```bash
+sudo bash -c 'ac=$(which alacritty); rm $ac; cp target/release/alacritty $ac'
+```
+
+then in your alacritty.toml file do this:
+```toml
+[scrolling]
+history = 4294967295
+```
+4294967295 = 0xffffffff = u32 max
+
+<br>
+<br>
+<br>
+<br>
+
 <p align="center">
     <img width="200" alt="Alacritty Logo" src="https://raw.githubusercontent.com/alacritty/alacritty/master/extra/logo/compat/alacritty-term%2Bscanlines.png">
 </p>
