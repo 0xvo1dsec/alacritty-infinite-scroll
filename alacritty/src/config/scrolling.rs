@@ -4,7 +4,7 @@ use serde::{Deserialize, Deserializer};
 use alacritty_config_derive::{ConfigDeserialize, SerdeReplace};
 
 /// Maximum scrollback amount configurable.
-pub const MAX_SCROLLBACK_LINES: u32 = 100_000;
+pub const MAX_SCROLLBACK_LINES: u32 = u32::MAX;
 
 /// Struct for scrolling related settings.
 #[derive(ConfigDeserialize, Copy, Clone, Debug, PartialEq, Eq)]
